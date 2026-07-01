@@ -1,0 +1,1363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Amydrop — Premium liquid laundry detergent. A family formula trusted for over 5 years. Love in every drop." />
+  <meta name="keywords" content="amydrop, liquid detergent, laundry detergent, chennai, fabric care" />
+  <meta name="author" content="Amydrop" />
+  <title>Amydrop — Liquid Laundry Detergent</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ===========================
+       CSS VARIABLES
+    =========================== */
+    :root {
+      --navy: #1C1C2E;
+      --navy-light: #33333385;
+      --orange: #ee8325;
+      --orange-dark: #f68624;
+      --white: #FFFFFF;
+      --black: #000000;
+      --ivory: #FAF7F0;
+      --gray-light: #F5F5F5;
+      --gray-text: #6C757D;
+      --font-serif: "Comfortaa", sans-serif;
+      --font-sans: 'Inter', sans-serif;
+      --transition: all 0.3s ease;
+      --light-gray: #747474;
+    }
+
+    /* ===========================
+       GLOBAL
+    =========================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--navy);
+      overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: var(--font-serif);
+    }
+
+    a {
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    /* ===========================
+       NAVBAR
+    =========================== */
+    .navbar {
+      background: var(--black) !important;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled {
+      padding: 8px 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-brand {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--white) !important;
+    }
+
+    .navbar-brand span {
+      color: var(--orange);
+    }
+
+    .navbar-toggler {
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .navbar-toggler-icon {
+      filter: invert(1);
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.7) !important;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 400;
+      margin: 0 8px;
+      transition: var(--transition);
+    }
+
+    .nav-link:hover {
+      color: var(--orange) !important;
+    }
+
+    .nav-cta {
+      background: var(--orange);
+      color: var(--white) !important;
+      padding: 8px 22px !important;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .nav-cta:hover {
+      background: var(--orange-dark);
+      color: var(--white) !important;
+    }
+
+    /* ===========================
+       HERO SECTION
+    =========================== */
+    #hero {
+      background: var(--white);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 20px 80px;
+    }
+
+    .hero-circle-1 {
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      background: var(--orange);
+      opacity: 0.06;
+    }
+
+    .hero-circle-2 {
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: var(--orange);
+      opacity: 0.04;
+    }
+
+    .hero-circle-3 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 107, 53, 0.08);
+    }
+
+    /* Launching Soon Badge */
+    .launching-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgb(255 107 53 / 13%);
+      border: 1px solid rgba(255, 107, 53, 0.35);
+      color: var(--orange);
+      font-size: 13px;
+      letter-spacing: 4px;
+      padding: 10px 24px;
+      border-radius: 40px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--orange);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(1.4);
+      }
+    }
+
+    /* Hero Logo */
+    .hero-logo {
+      font-family: var(--font-serif);
+      font-size: 96px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 12px;
+      letter-spacing: -2px;
+    }
+
+    .logo-a {
+      color: var(--orange);
+    }
+
+    .logo-m {
+      color: var(--light-gray);
+    }
+
+    .logo-y {
+      color: var(--orange);
+    }
+
+    .logo-drop {
+      color: var(--light-gray);
+    }
+
+    .hero-tagline {
+      font-size: 13px;
+      letter-spacing: 6px;
+      color: var(--orange);
+      opacity: 0.8;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+      font-weight: 500;
+      margin-top: 28px;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      color: var(--gray-text);
+      max-width: 570px;
+      margin: 20px auto 40px;
+      line-height: 1.8;
+      font-weight: 400;
+      letter-spacing: .2px;
+    }
+
+    .btn-orange {
+      background: var(--orange);
+      color: var(--white);
+      border: none;
+      padding: 15px 40px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .btn-orange:hover {
+      background: var(--orange-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-orange {
+      background: transparent;
+      color: var(--orange);
+      border: 1px solid var(--orange);
+      padding: 15px 40px;
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      font-weight: 500;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .btn-outline-orange:hover {
+      background: var(--orange);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    /* Scroll indicator */
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, 0.3);
+      font-size: 22px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(8px);
+      }
+    }
+
+    .drop-icon {
+      color: antiquewhite !important;
+    }
+
+    /* ===========================
+       STATS BAR
+    =========================== */
+    #stats {
+      background: var(--orange);
+      padding: 28px 0;
+    }
+
+    .stat-item {
+      text-align: center;
+      color: var(--white);
+    }
+
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    .stat-divider {
+      width: 1px;
+      height: 50px;
+      background: rgba(255, 255, 255, 0.3);
+      margin: auto;
+    }
+
+    /* ===========================
+       WHY AMYDROP SECTION
+    =========================== */
+    #why {
+      background: var(--ivory);
+      padding: 100px 0;
+    }
+
+    .section-label {
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: var(--orange);
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .section-divider {
+      width: 48px;
+      height: 3px;
+      background: var(--orange);
+      margin: 0 auto 48px;
+      border-radius: 2px;
+    }
+
+    .section-divider-left {
+      margin: 0 0 48px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: var(--transition);
+      height: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+      border-color: var(--orange);
+    }
+
+    .feature-icon {
+      width: 64px;
+      height: 64px;
+      background: rgba(255, 107, 53, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 26px;
+      color: var(--orange);
+      transition: var(--transition);
+    }
+
+    .feature-card:hover .feature-icon {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .feature-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .feature-desc {
+      font-size: 14px;
+      color: var(--gray-text);
+      line-height: 1.7;
+    }
+
+    /* ===========================
+       PRODUCTS SECTION
+    =========================== */
+    #products {
+      background: var(--white);
+      padding: 100px 0;
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--orange);
+      border-radius: 20px;
+      padding: 48px 32px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      height: 100%;
+    }
+
+    .product-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-card.popular {
+      border: 2px solid var(--orange);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--orange);
+      color: var(--white);
+      font-size: 10px;
+      padding: 5px 18px;
+      border-radius: 20px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .product-size {
+      font-family: "Nunito", sans-serif;
+      font-size: 40px;
+      font-weight: 500;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .product-unit {
+      font-size: 16px;
+      color: var(--gray-text);
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .product-price {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+
+    .product-note {
+      font-size: 13px;
+      color: var(--gray-text);
+      margin-bottom: 28px;
+    }
+
+    .product-features {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 28px;
+    }
+
+    .product-features li {
+      font-size: 13px;
+      color: var(--gray-text);
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .product-features li:last-child {
+      border-bottom: none;
+    }
+
+    .product-features li i {
+      color: var(--orange);
+      margin-right: 8px;
+    }
+
+    /* ===========================
+       OUR STORY SECTION
+    =========================== */
+    #story {
+      background: var(--black);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #story::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: var(--orange);
+      opacity: 0.05;
+    }
+
+    .story-label {
+      font-size: 13px;
+      letter-spacing: 4px;
+      color: var(--orange);
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .story-title {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .story-name {
+      font-family: var(--font-serif);
+      font-size: 64px;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .story-text {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.9;
+      margin-bottom: 28px;
+      font-weight: 300;
+    }
+
+    .story-quote {
+      border-left: 3px solid var(--orange);
+      padding-left: 24px;
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.7;
+    }
+
+    .story-img-box {
+      background: var(--navy-light);
+      border: 1px solid rgba(255, 107, 53, 0.2);
+      border-radius: 20px;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .story-img-icon {
+      font-size: 80px;
+      color: #ff6b354d;
+    }
+
+    .story-img-text {
+      font-size: 13px;
+      color: #b3b3b3;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* ===========================
+       CONTACT SECTION
+    =========================== */
+    #contact {
+      background: var(--ivory);
+      padding: 100px 0;
+    }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 16px;
+      padding: 36px 24px;
+      text-align: center;
+      transition: var(--transition);
+      height: 100%;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+      border-color: var(--orange);
+    }
+
+    .contact-icon {
+      font-size: 32px;
+      color: var(--orange);
+      margin-bottom: 16px;
+    }
+
+    .contact-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      margin-bottom: 8px;
+    }
+
+    .contact-value {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      border-radius: 20px;
+      padding: 48px 40px;
+    }
+
+    .form-control {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 14px;
+      font-family: var(--font-sans);
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+    }
+
+    .form-label {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--navy);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer {
+      background: #111;
+      padding: 48px 0 24px;
+    }
+
+    .footer-logo {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .footer-logo span {
+      color: var(--orange);
+    }
+
+    .footer-tagline {
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: rgba(255, 255, 255, 0.3);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 1px;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    .footer-heading {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.3);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .footer-divider {
+      border-color: rgba(255, 255, 255, 0.08);
+      margin: 32px 0 24px;
+    }
+
+    .footer-bottom {
+      font-size: 12px;
+      color: var(--light-gray);
+      letter-spacing: 1px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 16px;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      border-color: var(--orange);
+      color: var(--orange);
+    }
+
+    /* ===========================
+       TOAST NOTIFICATION
+    =========================== */
+    .toast-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+    }
+
+    /* ===========================
+       RESPONSIVE
+    =========================== */
+    @media (max-width: 768px) {
+      .hero-logo {
+        font-size: 56px;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .story-name {
+        font-size: 42px;
+      }
+
+      .story-title {
+        font-size: 36px;
+      }
+
+      .stat-divider {
+        display: none;
+      }
+
+      .contact-form {
+        padding: 32px 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-logo {
+        font-size: 42px;
+        letter-spacing: -1px;
+      }
+
+      .btn-orange,
+      .btn-outline-orange {
+        padding: 13px 28px;
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===========================
+       NAVBAR
+  =========================== -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="#">
+        <span><i class="bi bi-droplet-half drop-icon"></i></span> <span>Amy</span>drop
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#why">Why Amydrop</a></li>
+          <!-- <li class="nav-item"><a class="nav-link" href="#products">Products</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="#story">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="nav-link nav-cta" href="#products">Our Products</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===========================
+       HERO
+  =========================== -->
+  <section id="hero">
+    <div class="hero-circle-1"></div>
+    <div class="hero-circle-2"></div>
+    <div class="hero-circle-3"></div>
+
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-lg-9 col-xl-8">
+
+          <!-- Launching Soon Badge -->
+          <div class="launching-badge">
+            <span class="badge-dot"></span>
+            Launching Soon
+          </div>
+
+          <!-- Logo -->
+          <div class="hero-logo mb-2">
+            <span class="logo-a">A</span><span class="logo-m">m</span><span class="logo-y">y</span><span
+              class="logo-drop">drop</span>
+          </div>
+
+          <p class="hero-tagline">LIQUID LAUNDRY DETERGENT</p>
+
+          <p class="hero-desc">
+            Premium liquid laundry detergent crafted with care —
+            a family formula trusted for over 5 years.
+            Powerful clean. Gentle on fabrics.
+          </p>
+
+          <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="#products" class="btn-orange">Our Products</a>
+            <a href="#story" class="btn-outline-orange">Our Story</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <a href="#stats" class="scroll-down">
+      <i class="bi bi-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ===========================
+       STATS BAR
+  =========================== -->
+  <section id="stats">
+    <div class="container">
+      <div class="row align-items-center text-center g-4">
+        <div class="col-6 col-md-2">
+          <div class="stat-item">
+            <div class="stat-number">5+</div>
+            <div class="stat-label">Years Trusted</div>
+          </div>
+        </div>
+        <div class="col-md-1 d-none d-md-block">
+          <div class="stat-divider"></div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Natural Formula</div>
+          </div>
+        </div>
+        <div class="col-md-1 d-none d-md-block">
+          <div class="stat-divider"></div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="stat-item">
+            <div class="stat-number">3</div>
+            <div class="stat-label">Pack Sizes</div>
+          </div>
+        </div>
+        <div class="col-md-1 d-none d-md-block">
+          <div class="stat-divider"></div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="stat-item">
+            <div class="stat-number">♥</div>
+            <div class="stat-label">Made with Love</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       WHY AMYDROP
+  =========================== -->
+  <section id="why">
+    <div class="container">
+      <div class="text-center mb-2">
+        <p class="section-label">Why Amydrop</p>
+        <h2 class="section-title">Clean you can trust</h2>
+      </div>
+      <div class="section-divider"></div>
+
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-stars"></i>
+            </div>
+            <h4 class="feature-title">Superior Clean</h4>
+            <p class="feature-desc">Removes tough stains while being gentle on all fabric types including delicates.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-feather"></i>
+            </div>
+            <h4 class="feature-title">Eco Friendly</h4>
+            <p class="feature-desc">Biodegradable formula — safe for your family and the environment.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-droplet"></i>
+            </div>
+            <h4 class="feature-title">Fresh Fragrance</h4>
+            <p class="feature-desc">Long-lasting Surff fragrance leaves your clothes smelling beautifully fresh.</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="bi bi-shield-check"></i>
+            </div>
+            <h4 class="feature-title">5 Years Trusted</h4>
+            <p class="feature-desc">A proven family formula loved by homes and families across Chennai.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       PRODUCTS
+  =========================== -->
+  <section id="products">
+    <div class="container">
+      <div class="text-center mb-2">
+        <p class="section-label">Our Products</p>
+        <h2 class="section-title">Choose your size</h2>
+      </div>
+      <div class="section-divider"></div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- 500ml -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="product-card">
+            <div class="product-size">500</div>
+            <div class="product-unit">ml</div>
+            <div class="product-price">₹60</div>
+            <div class="product-note">Perfect for trial</div>
+            <ul class="product-features">
+              <li><i class="bi bi-check-circle-fill"></i>Ideal for small families</li>
+              <li><i class="bi bi-check-circle-fill"></i>Easy to carry</li>
+              <li><i class="bi bi-check-circle-fill"></i>Try before you commit</li>
+            </ul>
+            <a href="#contact" class="btn-orange w-100 d-block">Coming Soon</a>
+          </div>
+        </div>
+
+        <!-- 1 Litre — Popular -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="product-card">
+            <!-- <span class="popular-badge">Most Popular</span> -->
+            <div class="product-size">1</div>
+            <div class="product-unit">litre</div>
+            <div class="product-price">₹110</div>
+            <div class="product-note">Best for families</div>
+            <ul class="product-features">
+              <li><i class="bi bi-check-circle-fill"></i>Best value for money</li>
+              <li><i class="bi bi-check-circle-fill"></i>Lasts 30+ washes</li>
+              <li><i class="bi bi-check-circle-fill"></i>Most popular choice</li>
+            </ul>
+            <a href="#contact" class="btn-orange w-100 d-block">Coming Soon</a>
+          </div>
+        </div>
+
+        <!-- 5 Litre -->
+        <div class="col-sm-6 col-lg-4">
+          <div class="product-card">
+            <div class="product-size">5</div>
+            <div class="product-unit">litre</div>
+            <div class="product-price">₹360</div>
+            <div class="product-note">Bulk / B2B</div>
+            <ul class="product-features">
+              <li><i class="bi bi-check-circle-fill"></i>Hotels and institutions</li>
+              <li><i class="bi bi-check-circle-fill"></i>Best bulk price</li>
+              <li><i class="bi bi-check-circle-fill"></i>150+ washes</li>
+            </ul>
+            <a href="#contact" class="btn-orange w-100 d-block">Coming Soon</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       OUR STORY
+  =========================== -->
+  <section id="story">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+          <p class="story-label">Our Story</p>
+          <h2 class="story-title">Born from love</h2>
+          <div class="story-name">Kuppusamy</div>
+          <p class="story-text">
+            Amydrop was born from a father's dedication and passion.
+            For 5 years, Kuppusamy perfected a liquid detergent formula
+            that his family, friends, and neighbours trusted and loved.
+          </p>
+          <p class="story-text">
+            Today, his legacy lives on — bottled with the same love,
+            care, and quality in every drop of Amydrop. The brand name
+            itself carries his memory — <em>Amy</em> from Kuppus<strong style="color:var(--orange)">amy</strong>,
+            and <em>drop</em> for every precious drop of his dedication.
+          </p>
+          <div class="story-quote">
+            Every bottle of Amydrop carries his love, his passion,
+            and his life's work — continuing through us.
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="story-img-box">
+            <i class="bi bi-heart story-img-icon"></i>
+            <p class="story-img-text">A father's legacy</p>
+            <!-- <p style="font-size:13px;color:rgba(255,255,255,0.2);letter-spacing:1px;">Add your photo here</p> -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================
+       CONTACT
+  =========================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="text-center mb-2">
+        <p class="section-label">Get in Touch</p>
+        <h2 class="section-title">Contact Us</h2>
+      </div>
+      <div class="section-divider"></div>
+
+      <!-- Contact Info Cards -->
+      <div class="row g-4 mb-5">
+        <div class="col-sm-6 col-lg-3">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-envelope"></i></div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">contact@amydrop.com</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-globe"></i></div>
+            <div class="contact-label">Website</div>
+            <div class="contact-value">www.amydrop.com</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-geo-alt"></i></div>
+            <div class="contact-label">Location</div>
+            <div class="contact-value">Chennai, Tamil Nadu</div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="bi bi-clock"></i></div>
+            <div class="contact-label">Response Time</div>
+            <div class="contact-value">Within 24 hours</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-form">
+            <h3 class="mb-4" style="font-family:var(--font-serif);font-size:28px;color:var(--navy);">Send us a message
+            </h3>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Your Name</label>
+                  <input type="text" class="form-control" placeholder="John Doe" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" class="form-control" placeholder="john@example.com" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" placeholder="+91 98765 43210" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Enquiry Type</label>
+                  <select class="form-control">
+                    <option>General Enquiry</option>
+                    <option>Place an Order</option>
+                    <option>Bulk / B2B Order</option>
+                    <option>Distributor Enquiry</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Message</label>
+                  <textarea class="form-control" rows="5" placeholder="Tell us how we can help you..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn-orange w-100">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===========================
+       FOOTER
+  =========================== -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-lg-4">
+          <div class="footer-logo"><span>Amy</span>drop</div>
+          <!-- <div class="footer-tagline">Love in every drop</div> -->
+          <p style="font-size:13px;color:rgba(255,255,255,0.4);line-height:1.7;margin-bottom:24px;">
+            Premium liquid laundry detergent crafted with love.
+            A family formula trusted for over 5 years.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-whatsapp"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-lg-2 offset-lg-1">
+          <div class="footer-heading">Quick Links</div>
+          <ul class="footer-links">
+            <li><a href="#why">Why Amydrop</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#story">Our Story</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-2">
+          <div class="footer-heading">Products</div>
+          <ul class="footer-links">
+            <li><a href="#products">500ml Pack</a></li>
+            <li><a href="#products">1 Litre Pack</a></li>
+            <li><a href="#products">5 Litre Bulk</a></li>
+            <li><a href="#contact">B2B Orders</a></li>
+          </ul>
+        </div>
+
+        <div class="col-sm-6 col-lg-3">
+          <div class="footer-heading">Contact</div>
+          <ul class="footer-links">
+            <li><a href="mailto:contact@amydrop.com"><i class="bi bi-envelope me-2"></i>contact@amydrop.com</a></li>
+            <li><a href="#"><i class="bi bi-geo-alt me-2"></i>Chennai, Tamil Nadu</a></li>
+            <li><a href="http://www.amydrop.com"><i class="bi bi-globe me-2"></i>www.amydrop.com</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <hr class="footer-divider" />
+
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+        <p class="footer-bottom mb-0">© 2026 Amydrop. All rights reserved.</p>
+        <p class="footer-bottom mb-0">Made with <span style="color:var(--orange); font-size: 16px">♥</span> in Chennai,
+          India</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast-container">
+    <div id="successToast" class="toast align-items-center text-white border-0" role="alert"
+      style="background:var(--orange);">
+      <div class="d-flex">
+        <div class="toast-body">
+          <i class="bi bi-check-circle me-2"></i>Message sent successfully!
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.querySelector('.navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Contact form submit
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const toast = new bootstrap.Toast(document.getElementById('successToast'));
+      toast.show();
+      this.reset();
+    });
+
+    // Intersection Observer — fade in sections
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.feature-card, .product-card, .contact-card').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+
+</html>
